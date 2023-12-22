@@ -18,7 +18,7 @@ const TaskItem = ({ task }) => {
   };
   const handleDelete = async (taskId) => {
     try {
-      await axios.delete(`http://localhost:3001/api/tasks/${taskId}`);
+      await axios.delete(`https://backendpart-1zdq.onrender.com/api/tasks/${taskId}`);
       dispatch({ type: 'DELETE_TASK', payload: taskId });
     } catch (err) {
       console.log("Let's figure out");

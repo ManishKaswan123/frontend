@@ -12,7 +12,7 @@ const TaskDetails = ({ task, onDelete, onClose }) => {
   const handleUpdate = async () => {
     try {
       const updatedTask = { ...task, title: editedTitle, description: editedDescription };
-      await axios.put(`http://localhost:3001/api/tasks/${task._id}`, updatedTask);
+      await axios.put(`https://backendpart-1zdq.onrender.com/api/tasks/${task._id}`, updatedTask);
       dispatch({ type: 'UPDATE_TASK', payload: updatedTask });
     } catch (err) {
       console.log("Let's figure out");

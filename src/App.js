@@ -12,7 +12,7 @@ const App = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/tasks');
+        const response = await axios.get('https://backendpart-1zdq.onrender.com/api/tasks');
         dispatch({ type: 'SET_TASKS', payload: response.data.data });
       } catch (err) {
         console.log("Let's figure out");
@@ -23,7 +23,7 @@ const App = () => {
 
   const handleAddTask = async (newTask) => {
     try {
-      const response = await axios.post('http://localhost:3001/api/tasks', newTask);
+      const response = await axios.post('https://backendpart-1zdq.onrender.com/api/tasks', newTask);
       dispatch({ type: 'ADD_TASK', payload: response.data });
     } catch (err) {
       console.log("Let's figure out");
